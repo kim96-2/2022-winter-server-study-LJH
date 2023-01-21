@@ -2,6 +2,10 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+@app.route('/')
+def main():
+    return "main"
+
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
     if id>=5000:
