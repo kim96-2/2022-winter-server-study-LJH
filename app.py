@@ -17,9 +17,9 @@ def get(id):
 def post():
     jsonFile = request.get_json()
 
-    _name = jsonFile['name']
+    _name = jsonFile["name"]
 
-    return {'name': _name}
+    return {"name": _name}
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
