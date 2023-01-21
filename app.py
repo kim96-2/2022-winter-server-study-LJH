@@ -11,7 +11,7 @@ def get(id):
     if id>=5000:
         return {"message":True}
     else:
-        return {{"message":False}}
+        return {"message":False}
 
 @app.route('/id', methods=['POST'])
 def post():
