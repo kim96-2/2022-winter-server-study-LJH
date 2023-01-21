@@ -4,11 +4,18 @@ app = Flask(__name__)
 
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
-    return {"message": ""}
+    if id>=5000:
+        return {"message":True}
+    else:
+        return {{"message":False}}
 
 @app.route('/id', methods=['POST'])
 def post():
-    return {'name': ''}
+    jsonFile = request.get_json()
+
+    _name = jsonFile['name']
+
+    return {'name': _name}
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)
