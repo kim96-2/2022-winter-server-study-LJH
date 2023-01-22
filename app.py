@@ -9,9 +9,9 @@ def main():
 @app.route('/id/<int:id>', methods=['GET'])
 def get(id):
     if id>=5000:
-        return {"message":True}
+        return {"result":True}
     else:
-        return {"message":False}
+        return {"result":False}
 
 @app.route('/id', methods=['POST'])
 def post():
